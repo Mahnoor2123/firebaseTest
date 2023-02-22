@@ -11,8 +11,17 @@ function register() {
                 window.alert("user register sucessfully")
                 // Signed in 
                 var user = userCredential.user;
-
+                db.collection("user").doc(user.uid).set({
+                    email:email,
+                    password:password,
+                    user:user.uid
+                }).then(() =>{
                 window.location.href= "../../index.html"
+
+                }).catch((error) =>{
+                    window.alert(error.message)
+                })
+
 
                 // ...
             })
