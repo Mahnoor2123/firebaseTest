@@ -1,3 +1,6 @@
+let myUID = localStorage.getItem('userId');
+
+console.log(myUID);
 
 
 function addBlog() {
@@ -8,7 +11,21 @@ function addBlog() {
         window.alert("enter all fields")
 
     }else{
-        db.collection("")
+        let blogRef = db.collection('blogs').doc();
+
+        let data ={
+            blogTitle: blogTitle,
+            blogDescription: blogDescription,
+            userId: myUID,
+            docId: blogRef.id
+
+        }
+
+        blogRef.set(data).then(() =>{
+            window.alert('Blog Added Successfully');
+            window.location.reload();
+            
+        })
     }
 
 }

@@ -10,7 +10,9 @@ function login() {
                 window.alert("login sucessfully")
                 // Signed in
                 var user = userCredential.user;
-                window.location.href="../../home.html"
+                localStorage.setItem('userId' , user.uid);
+
+                window.location.href="../../home.html";
                 // ...
             })
             .catch((error) => {
