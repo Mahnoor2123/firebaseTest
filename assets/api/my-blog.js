@@ -14,8 +14,10 @@ db.collection('blogs').where('userId', '==' , myUid).get().then((data) =>{
         <div class="blogTitle">
             <h5>${blogData.data().blogTitle}</h5>
             <p>${blogData.data().blogDescription}</p>
+            <a href="">View Detail</a>
         </div>
     </div> 
+   
         
         `)
     })
