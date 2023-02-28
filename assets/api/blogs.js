@@ -7,7 +7,7 @@ db.collection('blogs').get().then((data) =>{
         <div class="blog">
             <div class="blogTitle">
                 <h5>${blogData.data().blogTitle}</h5>
-                <p>${blogData.data().blogDescription.slice(0,60)}....</p>
+                <p>${blogData.data().blogDescription.slice(0,190)}....</p>
                 <a href="../../blog-detail.html?id=${blogData.data().docId}">View Detail</a>
             </div>
         </div>

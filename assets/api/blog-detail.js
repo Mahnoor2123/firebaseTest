@@ -15,6 +15,6 @@ db.collection('blogs').doc(myParam).get().then((blogData) => {
 </div>
     `)
 }).catch((err) => {
-    
+    window.alert(err.message)
 });
 
